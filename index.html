@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="lib/d3.js" charset="utf-8"></script>
+</head>
+<body>
+  <script>
+  var work_visa_apps = d3.csv("data/work_visas_skim.csv")
+  .row(function(d) { console.log("d", d); return {key: d.key, value: +d.value}; })
+  .get(function(error, rows) { console.log(rows); });
+  </script>
+</body>
+</html>
