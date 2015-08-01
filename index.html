@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
   <script src="lib/d3.js" charset="utf-8"></script>
 </head>
 <body>
   <script>
-  var work_visa_apps = d3.csv("data/work_visas_skim.csv")
-  .row(function(d) { console.log("d", d); return {key: d.key, value: +d.value}; })
-  .get(function(error, rows) { console.log(rows); });
+  // loads decision, occupation, and region information from the supplied CSV
+  d3.csv("data/work_visas_cut.csv", function(d) {
+    return {
+      decision: d["Decision Type"],
+      occupation: d["Standard Submajor Group"],
+      region: d["Region"]
+    };
+  }, function(data) {
+    // this function iterates over every entry from the work visa CSV file
+    data.forEach(function(entry) {
+      // entry.decision += 'a';
+    });
+    // this logs the 250,000th entry to ensure that the CSV has been read properly
+    console.log(data[250000]);
+  });
   </script>
 </body>
 </html>
