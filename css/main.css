@@ -28,27 +28,27 @@ body {
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: rgba(0,0,0,0.4);
+
 }
 
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
     color: #fff;
-    background-color: rgba(0,0,0,0.7);
+
 }
 
 .btn-light {
     border-radius: 0;
     color: #333;
-    background-color: rgb(255,255,255);
+
 }
 
 .btn-light:hover,
 .btn-light:focus,
 .btn-light:active {
     color: #333;
-    background-color: rgba(255,255,255,0.8);
+
 }
 
 /* Custom Horizontal Rule */
@@ -63,11 +63,11 @@ hr.small {
     z-index: 1000;
     position: fixed;
     left: 0;
-    width: 250px;
+    width: 260px;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #27482a;
+    background: #7cb65c;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
@@ -78,7 +78,7 @@ hr.small {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 260px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -143,17 +143,41 @@ hr.small {
 }
 
 /* Header */
-
+/* BG-main */
 .header {
+    
     display: table;
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 100%;
-    background: #e6ffe6 no-repeat center center scroll;
+    height: 95%;
+    background: #d6d6d6 no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.head {
+    
+    top: -100%;
+    display: table;
+    width: 100%;
+    height: 100%;
+    background: #d6d6d6 no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    overflow: auto;
+}
+
+.footer {
+    position:absolute;
+    bottom:0px;
+    width: 100%;
+    margin: 0;
+    background-color: #7e7e7e;
+    height: 100px;/* or however high you would like */
 }
 
 /* About */
@@ -168,28 +192,12 @@ hr.small {
     padding: 50px 0;
 }
 
-.service-item {
-    margin-bottom: 30px;
-}
-
-/* Callout */
-
-.callout {
-    display: table;
-    width: 100%;
-    height: 400px;
-    color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
 
 /*Canvas*/
 
 
 #canvas {
+    display:none;
 	height: 400px;
 	left: 40%;
 	margin: -150px 0 0 -300px;
@@ -223,15 +231,15 @@ hr.small {
 
 #canvas {
 	height: 400px;
-	left: 40%;
+	left: 30%;
 	margin: -150px 0 0 -300px;
 	position: absolute;
 	top: 40%;
-	width: 900px;
+	width: 60%;
 }
 
 #paper {
-	height: 400px;
+	height: 80%;
 	left: 0;
 	position: absolute;
 	top: 0;
@@ -239,21 +247,25 @@ hr.small {
 }
 
 .region-desc {
+    text-align: right;
 	display: none;
-	height: 400px;
+	height: 80%;
 	overflow: auto;
 	position: absolute;
-	right: 0;
+	left: 65%;
 	top: 0;
-	width: 500px;
+	width: 60%;
+    background: red;
 }
 
-.hline { 
+
+.logo{
     
-    width:100%; 
-    height:1px; 
-    background: #000000 
-}
+    left: 11.5%;
+    top: 20%;
+    height: 60%;
+    width: 28%;
+    position: absolute;
 
 /* Micro reset */
 *,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}

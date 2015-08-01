@@ -1,9 +1,9 @@
 window.onload = function() {
-	var R = Raphael("paper", 400, 400);
+	var R = Raphael("paper", 500, 500);
 	var attr = {
-		fill : "#333",
-		stroke : "#666",
-		"stroke-width" : 1,
+		fill : "#ffffff",
+		stroke : "#ffffff",
+		"stroke-width" : 0.0,
 		"stroke-linejoin" : "round"
 	};
 
@@ -85,8 +85,8 @@ window.onload = function() {
 			st[0].onmouseover = function() {
 				current && nz[current].animate({
                     
-							fill : "#333",
-							stroke : "#666"
+							fill : "#ffffff",
+							stroke : "#ffffff"
 						}, 500) && (document.getElementById(current).style.display = "");
 				st.animate({
 					fill : st.color,
@@ -100,8 +100,8 @@ window.onload = function() {
 			};
 			st[0].onmouseout = function() {
 				st.animate({
-					fill : "#333",
-					stroke : "#666"
+					fill : "#ffffff",
+					stroke : "#f8f8f8"
 				}, 500);
 				st.toFront();
 				R.safari();
