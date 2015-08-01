@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
+    
+    
+<!-- begain to impliment other means of data-visa just incase, i.e pie html5 pie charts-->
+<!-- http://rendro.github.io/easy-pie-chart/  thanQ!~-->
+<!-- http://www.chartjs.org/-->
+    
 <head>
+    
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +33,13 @@
     <script src="js/nzgeography.js"></script>           
     <script src="js/raphael.js"></script>
     <script src="lib/d3.js" charset="utf-8"></script>
+    
+    <script src="js/chart.js"</script>
+    
+    <!-- fontzez -->
+    <style>
+    @font-face { font-family: akzidenz; src="fonts/akzidenz-grotesk-bold.ttf;" }
+    </style>
 
 </head>
 
@@ -62,7 +76,7 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >visigration.</a>
+                <a href="#top"  onclick = $("#menu-close").click(); >Search Criteria</a>
             </li>
             <li>
                 <a href="#top" onclick = $("#menu-close").click(); >cata1</a>
@@ -79,6 +93,19 @@
             <li>
                 <a href="#contact" onclick = $("#menu-close").click(); >cata5</a>
             </li>
+            <li><input type="checkbox" name= ' ' value= ' '> ct1</li>
+            <li><input type="checkbox" name= ' ' value= ' '> ct2</li>
+            <li><input type="checkbox" name= ' ' value= ' '> ct3</li>
+            <li><input type="checkbox" name= ' ' value= ' '> ct4</li>
+            <li><input type="checkbox" name= ' ' value= ' '> ct5</li>
+            <li><input type="checkbox" name= ' ' value= ' '> ct6</li>
+            <ul class="dropdown-menu">
+                
+            <li><a href="#">ct1</a></li>
+                <li><a href="#">ct2</a></li>
+                <li><a href="#">ct3</a></li>
+                <li><a href="#">ct4</a></li>
+                </ul>
         </ul>
     </nav>
     
@@ -95,85 +122,111 @@
             $('#canvas').fadeIn('6000');
                 $('#canvas').show();
                 $('.logo').fadeOut('6006');
+                $('.visitix').fadeOut('6006');
                
             }, xSeconds);</script>
       
-<div id ="overlay"><img id="logo" class="logo" src="img/logo2.png"</div>
+        
+    <div id ="overlay">
+    <img id="logo" class="logo" src="img/logo2.png">
+        <h6 class="visitx" id="visitx">V  I  S  I  G  R  A  T  I  O  N.</h6>
+                        
+                        
+        </div>
 
+    
          <div id="canvas">
-     
       
 <!--Divs will hold visual-data-->     
         
 		<div id="paper"></div>
-     
+             
 		<div id="northland" class="region-desc">
-			<h2>Northland (Te Tai-tokerau)</h2>
-
+			<h2>Northland (Te Tai-tokerau)  </h2>
+            <div id="region-row" class="region-row"></div>
+dsfsdf
 		</div>
 		<div id="waikato" class="region-desc">
-			<h2>Waikato</h2>
+			<h2>Waikato  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="auckland" class="region-desc">
-			<h2>Auckland (Tāmaki Makaurau)</h2>
+			<h2>Auckland (Tāmaki Makaurau)  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="manawatu" class="region-desc">
-			<h2>Manawatu-Wanganui</h2>
+			<h2>Manawatu-Wanganui  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="bayofplenty" class="region-desc">
-			<h2>Bay of Plenty (Te Moana-a-Toi)</h2>
+			<h2>Bay of Plenty (Te Moana-a-Toi)  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="eastcape" class="region-desc">
-			<h2>Gisborne (Tai Rāwhiti)</h2>
+			<h2>Gisborne (Tai Rāwhiti)  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="hawkesbay" class="region-desc">
-			<h2>Hawke's Bay (Heretaunga)</h2>
+			<h2>Hawke's Bay (Heretaunga)  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="taranaki" class="region-desc">
-			<h2>Taranaki</h2>
+			<h2>Taranaki  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="wellington" class="region-desc">
-			<h2>Wellington (Te Upoko-o-te-Ika)</h2>
+			<h2>Wellington (Te Upoko-o-te-Ika)  </h2>
+            <div id="region-row" class="region-row"></div>
 	
 		</div>
 		<div id="canterbury" class="region-desc">
-			<h2>Canterbury (Waitaha)</h2>
+			<h2>Canterbury (Waitaha)  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="marlborough" class="region-desc">
-			<h2>Marlborough (Marapara)</h2>
+			<h2>Marlborough (Marapara)  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="westcoast" class="region-desc">
-			<h2>The West Coast (Te Tai Poutini)</h2>
+			<h2>The West Coast (Te Tai Poutini)  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="otago" class="region-desc">
-			<h2>Otago (Otakou)</h2>
+			<h2>Otago (Otakou)  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="southland" class="region-desc">
-			<h2>Southland (Murihiku)</h2>
+			<h2>Southland (Murihiku)  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="nelson" class="region-desc">
-			<h2>Nelson (Whakatū)</h2>
+			<h2>Nelson (Whakatū)  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 		<div id="tasman" class="region-desc">
-			<h2>Tasman (Te Tau Ihu o Te Waka a Maui)</h2>
+			<h2>Tasman (Te Tau Ihu o Te Waka a Maui)  </h2>
+            <div id="region-row" class="region-row"></div>
 
 		</div>
 
+
         
     </header>
+                <div id="footer" class="footer"></div>
+                <div id="headz" class="headz"></div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
