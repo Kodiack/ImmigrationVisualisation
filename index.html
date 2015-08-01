@@ -1,12 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <meta content="utf-8" http-equiv="encoding">
-  <script src="lib/d3.js" charset="utf-8"></script>
-</head>
+<!doctype = HTML>
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>visigration</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="scripts/jQuery.1.4.js"></script>
+        <script src="scripts/jQueryMap.js"></script>
+        <script src="js/nzgeography.js"></script>
+                
+        <script src="js/raphael.js"></script>
+        <script src="lib/d3.js" charset="utf-8"></script>
+        
+        
+    </head>
+
+
 <body>
-  <script>
+<script>
   // loads decision, occupation, and region information from the supplied CSV
   d3.csv("data/work_visas_cut.csv", function(d) {
     return {
@@ -22,6 +46,112 @@
     // this logs the 250,000th entry to ensure that the CSV has been read properly
     console.log(data[250000]);
   });
-  </script>
+  </script>    
+    
+    
+<ul class="navigation">
+    <li class="nav-item"><a href="#">Cata1</a></li>
+    <li class="nav-item"><a href="#">Cata2</a></li>
+    <li class="nav-item"><a href="#">Cata3</a></li>
+    <li class="nav-item"><a href="#">Cata4</a></li>
+    <li class="nav-item"><a href="#">Cata5</a></li>
+</ul>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
+
+<div class="site-wrap">
+    
+    
+     <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24495155-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+ <div id="canvas">
+        
+		<div id="paper"></div>
+		<div id="northland" class="region-desc">
+			<h2>Northland (Te Tai-tokerau)</h2>
+
+		</div>
+		<div id="waikato" class="region-desc">
+			<h2>Waikato</h2>
+
+		</div>
+		<div id="auckland" class="region-desc">
+			<h2>Auckland (Tāmaki Makaurau)</h2>
+
+		</div>
+		<div id="manawatu" class="region-desc">
+			<h2>Manawatu-Wanganui</h2>
+
+		</div>
+		<div id="bayofplenty" class="region-desc">
+			<h2>Bay of Plenty (Te Moana-a-Toi)</h2>
+
+		</div>
+		<div id="eastcape" class="region-desc">
+			<h2>Gisborne (Tai Rāwhiti)</h2>
+
+		</div>
+		<div id="hawkesbay" class="region-desc">
+			<h2>Hawke's Bay (Heretaunga)</h2>
+
+		</div>
+		<div id="taranaki" class="region-desc">
+			<h2>Taranaki</h2>
+
+		</div>
+		<div id="wellington" class="region-desc">
+			<h2>Wellington (Te Upoko-o-te-Ika)</h2>
+	
+		</div>
+		<div id="canterbury" class="region-desc">
+			<h2>Canterbury (Waitaha)</h2>
+
+		</div>
+		<div id="marlborough" class="region-desc">
+			<h2>Marlborough (Marapara)</h2>
+
+		</div>
+		<div id="westcoast" class="region-desc">
+			<h2>The West Coast (Te Tai Poutini)</h2>
+
+		</div>
+		<div id="otago" class="region-desc">
+			<h2>Otago (Otakou)</h2>
+
+		</div>
+		<div id="southland" class="region-desc">
+			<h2>Southland (Murihiku)</h2>
+
+		</div>
+		<div id="nelson" class="region-desc">
+			<h2>Nelson (Whakatū)</h2>
+
+		</div>
+		<div id="tasman" class="region-desc">
+			<h2>Tasman (Te Tau Ihu o Te Waka a Maui)</h2>
+
+		</div>
+     
+
+  
+
+    </div>
+  
+
+</div>
+    
 </body>
-</html>
+
