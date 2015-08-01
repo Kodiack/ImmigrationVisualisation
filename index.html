@@ -1,35 +1,38 @@
-<!doctype = HTML>
+<!DOCTYPE html>
+<html lang="en">
 
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>visigration</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<head>
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-        <script src="scripts/jQuery.1.4.js"></script>
-        <script src="scripts/jQueryMap.js"></script>
-        <script src="js/nzgeography.js"></script>
-                
-        <script src="js/raphael.js"></script>
-        <script src="lib/d3.js" charset="utf-8"></script>
-        
-        
-    </head>
+    <title>Visigration.</title>
 
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- jQuery&Stuff -->
+    
+    <script src="js/nzgeography.js"></script>           
+    <script src="js/raphael.js"></script>
+    <script src="lib/d3.js" charset="utf-8"></script>
+
+</head>
 
 <body>
+
+<!--Backend Coms-->
+    
 <script>
   // loads decision, occupation, and region information from the supplied CSV
   d3.csv("data/work_visas_cut.csv", function(d) {
@@ -48,38 +51,48 @@
   });
   </script>    
     
-    
-<ul class="navigation">
-    <li class="nav-item"><a href="#">Cata1</a></li>
-    <li class="nav-item"><a href="#">Cata2</a></li>
-    <li class="nav-item"><a href="#">Cata3</a></li>
-    <li class="nav-item"><a href="#">Cata4</a></li>
-    <li class="nav-item"><a href="#">Cata5</a></li>
-</ul>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger"></label>
-
-<div class="site-wrap">
+<!--End Backend Coms-->    
     
     
-     <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-24495155-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
     
- <div id="canvas">
+    <!-- Navigation -->
+    
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top"  onclick = $("#menu-close").click(); >visigration.</a>
+            </li>
+            <li>
+                <a href="#top" onclick = $("#menu-close").click(); >cata1</a>
+            </li>
+            <li>
+                <a href="#about" onclick = $("#menu-close").click(); >cata2</a>
+            </li>
+            <li>
+                <a href="#services" onclick = $("#menu-close").click(); >cata3</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick = $("#menu-close").click(); >cata4</a>
+            </li>
+            <li>
+                <a href="#contact" onclick = $("#menu-close").click(); >cata5</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+
+         <div id="canvas">
+     
+      
+<!--Divs will hold visual-data-->     
         
 		<div id="paper"></div>
+     
 		<div id="northland" class="region-desc">
 			<h2>Northland (Te Tai-tokerau)</h2>
 
@@ -144,14 +157,48 @@
 			<h2>Tasman (Te Tau Ihu o Te Waka a Maui)</h2>
 
 		</div>
-     
+        
+        
+    </header>
 
-  
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-    </div>
-  
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-</div>
-    
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
 </body>
 
+</html>
