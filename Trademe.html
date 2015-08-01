@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="lib/jquery-2.1.4.js"></script>
+</head>
+<body>
+  <script>
+  // var TrademeAPI="https://api.trademe.co.nz/v1/Categories/Jobs.json?with_counts=false"
+  // $.getJSON( TrademeAPI,{
+  // }).done(function( data ) {
+  // console.log(data);
+  // });
+  
+  $.ajax({
+  dataType: "json",
+  url: "https://api.trademe.co.nz/v1/Search/Jobs.json?oauth_consumer_key=3CDFC85F813DABFCF20B7B203DB0A9B7&oauth_signature_method=PLAINTEXT&oauth_signature=B3E421EDCE2ABFA7D84E4390C17F4E6B%26",
+  success: function( data ) {
+		console.log(data.TotalCount);
+	  }
+  });
+   
+   function afterUserSelectedCategoryAndRegion(categoryId, regionId) {
+	  $.ajax({
+		  dataType: "json",
+		  url: "https://api.trademe.co.nz/v1/Search/Jobs.json?region=" + regionId + "&category=" + categoryId + "&oauth_consumer_key=3CDFC85F813DABFCF20B7B203DB0A9B7&oauth_signature_method=PLAINTEXT&oauth_signature=B3E421EDCE2ABFA7D84E4390C17F4E6B%26",
+		  success: function( data ) {
+				console.log(data.TotalCount);
+			  }
+		  });
+   
+   }
+   
+  </script>
+</body>
+</html>
