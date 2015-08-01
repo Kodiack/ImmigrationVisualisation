@@ -109,9 +109,6 @@
         </ul>
     </nav>
     
-
-    
-    
     
     <!-- Header -->
     <header id="top" class="header">
@@ -129,7 +126,8 @@
         
     <div id ="overlay">
     <img id="logo" class="logo" src="img/logo2.png">
-        <h6 class="visitx" id="visitx">V  I  S  I  G  R  A  T  I  O  N.</h6>
+        
+        <!--<h6 class="visitx" id="visitx">V  I  S  I  G  R  A  T  I  O  N.</h6>-->
                         
                         
         </div>
@@ -141,12 +139,16 @@
              
              
                  <!-- Google Charts API-->
-    
+             
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
     
                  
       <script>
-          
+/* 
+
+      //Java Method.
+      
       google.setOnLoadCallback(drawChart);
       function drawChart() {
 
@@ -166,7 +168,40 @@
         var chart = new google.visualization.PieChart(document.getElementById('Region-pie'));
 
         chart.draw(data, options);
-      }</script>
+        }
+        
+        
+*/
+          
+    //JSON Method.
+        
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1', {'packages':['corechart']});
+      
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.setOnLoadCallback(drawChart);
+      
+    function drawChart() {
+      var jsonData = $.ajax({
+          url: "getData.php",
+          dataType:"json",
+          async: false
+          }).responseText;
+          
+      // Create our data table out of JSON data loaded from server.
+      var data = new google.visualization.DataTable(jsonData);
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.PieChart(document.getElementById('Region-pie'));
+      chart.draw(data, {width: 400, height: 240});
+    }
+
+    </script>
+
+          
+          
+          
+      </script>
         
 		<div id="paper"></div>
              
