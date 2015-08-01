@@ -40,7 +40,7 @@
     <style>
     @font-face { font-family: akzidenz; src="fonts/akzidenz-grotesk-bold.ttf;" }
     </style>
-
+    
 </head>
 
 <body>
@@ -137,14 +137,44 @@
     
          <div id="canvas">
       
-<!--Divs will hold visual-data-->     
+<!--Divs will hold visual-data--> 
+             
+             
+                 <!-- Google Charts API-->
+    
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
+    
+                 
+      <script>
+          
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('Region-pie'));
+
+        chart.draw(data, options);
+      }</script>
         
 		<div id="paper"></div>
              
 		<div id="northland" class="region-desc">
 			<h2>Northland (Te Tai-tokerau)  </h2>
+            <div id="Region-pie"></div>
             <div id="region-row" class="region-row"></div>
-dsfsdf
+
 		</div>
 		<div id="waikato" class="region-desc">
 			<h2>Waikato  </h2>

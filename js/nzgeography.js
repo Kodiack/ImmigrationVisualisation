@@ -84,7 +84,7 @@ window.onload = function() {
 			st[0].style.cursor = "pointer";
 			st[0].onmouseover = function() {
 				current && nz[current].animate({
-                    
+                          
 							fill : "#ffffff",
 							stroke : "#ffffff"
 						}, 500) && (document.getElementById(current).style.display = "");
@@ -97,6 +97,7 @@ window.onload = function() {
 				R.safari();
 				document.getElementById(region).style.display = "block";
 				current = region;
+    
 			};
 			st[0].onmouseout = function() {
 				st.animate({
