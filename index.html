@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-    
-    
-    
+<html lang="en">    
 <!-- begain to impliment other means of data-visa just incase, i.e pie html5 pie charts-->
 <!-- http://rendro.github.io/easy-pie-chart/  thanQ!~-->
 <!-- http://www.chartjs.org/-->
     
 <head>
-    
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +22,7 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?    family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- jQuery&Stuff -->
     
@@ -71,42 +67,28 @@
   
     <!-- Navigation -->
     
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >Search Criteria</a>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle navbar-right" data-toggle="dropdown"   role="button" aria-haspopup="true" aria-expanded="false" >Occupation<span class="caret"></span></a>
+              <ul class="narbar-right dropdown-menu">
+                <li><a href="#">Information Technology</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+              </ul>
             </li>
-            <li>
-                <a href="#top" onclick = $("#menu-close").click(); >cata1</a>
-            </li>
-            <li>
-                <a href="#about" onclick = $("#menu-close").click(); >cata2</a>
-            </li>
-            <li>
-                <a href="#services" onclick = $("#menu-close").click(); >cata3</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >cata4</a>
-            </li>
-            <li>
-                <a href="#contact" onclick = $("#menu-close").click(); >cata5</a>
-            </li>
-            <li><input type="checkbox" name= ' ' value= ' '> ct1</li>
-            <li><input type="checkbox" name= ' ' value= ' '> ct2</li>
-            <li><input type="checkbox" name= ' ' value= ' '> ct3</li>
-            <li><input type="checkbox" name= ' ' value= ' '> ct4</li>
-            <li><input type="checkbox" name= ' ' value= ' '> ct5</li>
-            <li><input type="checkbox" name= ' ' value= ' '> ct6</li>
-            <ul class="dropdown-menu">
-                
-            <li><a href="#">ct1</a></li>
-                <li><a href="#">ct2</a></li>
-                <li><a href="#">ct3</a></li>
-                <li><a href="#">ct4</a></li>
-                </ul>
-        </ul>
+          </ul>
+          
+        </div><!--/.nav-collapse -->
+      </div>
     </nav>
     
     
@@ -116,7 +98,7 @@
         <script>var xSeconds = 1000; // 1 second
 
             setTimeout(function() {
-            $('#canvas').fadeIn('6000');
+                $('#canvas').fadeIn('6000');
                 $('#canvas').show();
                 $('.logo').fadeOut('6006');
                 $('.visitix').fadeOut('6006');
@@ -145,7 +127,6 @@
     
                  
       <script>
-/* 
 
       //Java Method.
       
@@ -162,17 +143,20 @@
         ]);
 
         var options = {
-          title: 'My Daily Activities'
+            
+          title: 'My Daily Activities',
+          backgroundColor: 'translarent'
+            
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('Region-pie'));
 
         chart.draw(data, options);
+          
         }
         
         
-*/
-          
+   /*       
     //JSON Method.
         
     // Load the Visualization API and the piechart package.
@@ -195,11 +179,10 @@
       var chart = new google.visualization.PieChart(document.getElementById('Region-pie'));
       chart.draw(data, {width: 400, height: 240});
     }
+*/
 
-    </script>
 
-          
-          
+              
           
       </script>
         
