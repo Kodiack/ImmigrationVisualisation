@@ -1,3 +1,3 @@
 # ImmigrationVisualisation
 
-Cleanly visualises various statistics and data from Immigration New Zealand.
+Generates visualisation of New Zealand employment data. Find out where people working in your industry are located!
