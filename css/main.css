@@ -250,11 +250,11 @@ hr.small {
 .region-desc {
     text-align: right;
 	display: none;
-	height: 100%;
+	height: 900px;
 	overflow: hidden;
 	position: absolute;
 	left: 65%;
-	top: 0;
+	top: -20%;
 	width: 90.7%;
     background: #7cb65c;
 
@@ -317,10 +317,14 @@ height: 5% ;
 background-color: #676767 ;
 }
 
-.Region-pie{
+#Region-pie {
+    position:absolute;
+    top: -43px;
+    left: -46px;
+}
+
+.Region-scale{
     
-    width: 60%;
-    height: 60%;
-    
+
 }
 

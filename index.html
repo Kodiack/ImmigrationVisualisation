@@ -144,14 +144,17 @@
 
         var options = {
             
-          title: 'My Daily Activities',
-          backgroundColor: 'translarent'
+          backgroundColor: 'transparent',
+          height: 600, width: 600
+          
+     
             
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('Region-pie'));
 
         chart.draw(data, options);
+        
           
         }
         
@@ -180,9 +183,7 @@
       chart.draw(data, {width: 400, height: 240});
     }
 */
-
-
-              
+      
           
       </script>
         
@@ -190,7 +191,7 @@
              
 		<div id="northland" class="region-desc">
 			<h2>Northland (Te Tai-tokerau)  </h2>
-            <div id="Region-pie"></div>
+            <div id="Region-pie" class="region-pie"></div>
             <div id="region-row" class="region-row"></div>
 
 		</div>
