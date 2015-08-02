@@ -27,12 +27,12 @@ d3.csv("data/work_visas_cut.csv", function(d) {
 });
 
 google.setOnLoadCallback(drawChart);
-function drawChart() {
+function drawChart(region) {
   var array = [];
 
   array.push(["Occupation", "Count"]);
 
-  $.map(regionOccupationCounts["Nelson"], function(value, index) {
+  $.map(regionOccupationCounts[region], function(value, index) {
     array.push([index,value]);
   });
 
@@ -48,7 +48,9 @@ function drawChart() {
     is3D: true
   };
 
-  var chart = new google.visualization.PieChart(document.getElementById('region-pie'));
+  var chartDivId = "region-pie-"+region.toLowerCase().replace(/ /g,"");
+  var chartDiv = document.getElementById(chartDivId);
+  var chart = new google.visualization.PieChart(chartDiv);
 
   chart.draw(data, options);
 }

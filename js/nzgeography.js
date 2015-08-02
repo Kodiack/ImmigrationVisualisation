@@ -1,3 +1,75 @@
+function getRegion(region) {
+	switch(region) {
+	    case "northland":
+	    return "Northland";
+	    break;
+
+	    case "waikato":
+	    return "Waikato";
+	    break;
+
+	    case "auckland":
+	    return "Auckland";
+	    break;
+
+	    case "manawatu":
+	    return "Manawatu";
+	    break;
+
+	    case "bayofplenty":
+	    return "Bay of Plenty";
+	    break;
+
+	    case "eastcape":
+	    return "East Cape";
+	    break;
+
+	    case "hawkesbay":
+	    return "Hawkes Bay";
+	    break;
+
+	    case "taranaki":
+	    return "Taranaki";
+	    break;
+
+	    case "wellington":
+	    return "Wellington";
+	    break;
+
+	    case "canterbury":
+	    return "Canterbury";
+	    break;
+
+	    case "marlborough":
+	    return "Marlborough";
+	    break;
+
+	    case "westcoast":
+	    return "West Coast";
+	    break;
+
+	    case "otago":
+	    return "Otago";
+	    break;
+
+	    case "southland":
+	    return "Southland";
+	    break;
+
+	    case "nelson":
+	    return "Nelson";
+	    break;
+
+	    case "tasman":
+	    return "Tasman";
+	    break;
+
+	    default:
+	    // improper region
+	    break;
+	} 
+}
+
 window.onload = function() {
 	var R = Raphael("paper", 500, 500);
 	var attr = {
@@ -97,6 +169,9 @@ window.onload = function() {
 				R.safari();
 				document.getElementById(region).style.display = "block";
 				current = region;
+
+				var chartRegionName = getRegion(region);
+				drawChart(chartRegionName);
     
 			};
 			st[0].onmouseout = function() {
