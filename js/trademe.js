@@ -26,9 +26,8 @@ function trademeJobsCategoryAndRegion(categoryId, regionId) {
   $.ajax({
     dataType: "json",
     url: "https://api.trademe.co.nz/v1/Search/Jobs.json?" + region + "category=" + categoryId + "&oauth_consumer_key=3CDFC85F813DABFCF20B7B203DB0A9B7&oauth_signature_method=PLAINTEXT&oauth_signature=B3E421EDCE2ABFA7D84E4390C17F4E6B%26",
-    success: function( data ) {
+    success: function(data) {
       console.log(data.TotalCount);
     }
   });
-
 }
