@@ -41,9 +41,11 @@ function drawChart() {
   var data = google.visualization.arrayToDataTable(array);
 
   var options = {
-    title: 'Occupation',
+
     backgroundColor: 'transparent',
-    height: 600, width: 600
+    height: 600, width: 600,
+    colors: ['#9BBF97', '#687F64', '#CFFFC9', '#344032', '#9FBFB1', '#DDFFDD', '#D5FFEC', '#35403B', '#BFE5D4', '#A5BFBA', '#6E7F7C'],
+    is3D: true
   };
 
   var chart = new google.visualization.PieChart(document.getElementById('region-pie'));

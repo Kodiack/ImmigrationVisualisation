@@ -15,6 +15,11 @@ body {
     vertical-align: middle;
 }
 
+#occupations {
+    
+    
+}
+
 .text-vertical-center h1 {
     margin: 0;
     padding: 0;
@@ -178,7 +183,7 @@ hr.small {
     width: 100%;
     margin: 0;
     background-color: #7cb65c;
-    height: 100px;/* or however high you would like */
+    height: 80px;/* or however high you would like */
 }
 
 /* About */
@@ -250,11 +255,11 @@ hr.small {
 .region-desc {
     text-align: right;
 	display: none;
-	height: 900px;
+	height: 138%;
 	overflow: hidden;
 	position: absolute;
 	left: 65%;
-	top: -20%;
+	top: -11%;
 	width: 90.7%;
     background: #7cb65c;
 

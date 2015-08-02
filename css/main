@@ -6,6 +6,12 @@ body {
     height: 100%;
 }
 
+#occupations {
+    
+    position: fixed; 
+    
+}
+
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
