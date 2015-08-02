@@ -1,119 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">    
+<html lang="en">
 <!-- begain to impliment other means of data-visa just incase, i.e pie html5 pie charts-->
 <!-- http://rendro.github.io/easy-pie-chart/  thanQ!~-->
 <!-- http://www.chartjs.org/-->
-    
+
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Visigration.</title>
+  <title>Visigration.</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/main.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/main.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?    family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <!-- Custom Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?    family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- jQuery&Stuff -->
-    
-    <script src="js/nzgeography.js"></script>           
-    <script src="js/raphael.js"></script>
-    <script src="lib/d3.js" charset="utf-8"></script>
-    
-    <script src="js/chart.js"</script>
-    
+  <!-- jQuery&Stuff -->
+
+  <script src="js/nzgeography.js"></script>
+  <script src="js/raphael.js"></script>
+  <script src="lib/d3.js" charset="utf-8"></script>
+
+  <script src="js/chart.js"</script>
+
     <!-- fontzez -->
     <style>
     @font-face { font-family: akzidenz; src="fonts/akzidenz-grotesk-bold.ttf;" }
     </style>
-    
-</head>
 
-<body>
+  </head>
 
-<!--Backend Coms-->
-    
-<script>
-  // loads decision, occupation, and region information from the supplied CSV
-  d3.csv("data/work_visas_cut.csv", function(d) {
-    return {
-      decision: d["Decision Type"],
-      occupation: d["Standard Submajor Group"],
-      region: d["Region"]
-    };
-  }, function(data) {
-    // this function iterates over every entry from the work visa CSV file
-    data.forEach(function(entry) {
-      // entry.decision += 'a';
-    });
-    // this logs the 250,000th entry to ensure that the CSV has been read properly
-    console.log(data[250000]);
-  });
-  </script>    
-    
+  <body>
 
-<!--End Backend Coms-->    
-    
-  
+    <!--Backend Coms-->
+
+    <script>
+    </script>
+
+
+    <!--End Backend Coms-->
+
+
     <!-- Navigation -->
-    
+
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
 
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle navbar-right" data-toggle="dropdown"   role="button" aria-haspopup="true" aria-expanded="false" >Occupation<span class="caret"></span></a>
-              <ul class="narbar-right dropdown-menu">
-                <li><a href="#">Information Technology</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-              </ul>
-            </li>
-          </ul>
-          
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-    
-    
-    <!-- Header -->
-    <header id="top" class="header">
-        
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle navbar-right" data-toggle="dropdown"   role="button" aria-haspopup="true" aria-expanded="false" >Occupation<span class="caret"></span></a>
+                <ul class="narbar-right dropdown-menu">
+                  <li><a href="#">Information Technology</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                </ul>
+              </li>
+            </ul>
+
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+
+      <!-- Header -->
+      <header id="top" class="header">
+
         <script>var xSeconds = 1000; // 1 second
 
-            setTimeout(function() {
-                $('#canvas').fadeIn('6000');
-                $('#canvas').show();
-                $('.logo').fadeOut('6006');
-                $('.visitix').fadeOut('6006');
-               
-            }, xSeconds);</script>
-      
-        
-    <div id ="overlay">
-    <img id="logo" class="logo" src="img/logo2.png">
-        
-        <!--<h6 class="visitx" id="visitx">V  I  S  I  G  R  A  T  I  O  N.</h6>-->
-                        
-                        
+        setTimeout(function() {
+          $('#canvas').fadeIn('6000');
+          $('#canvas').show();
+          $('.logo').fadeOut('6006');
+          $('.visitix').fadeOut('6006');
+
+        }, xSeconds);</script>
+
+
+        <div id ="overlay">
+          <img id="logo" class="logo" src="img/logo2.png">
+
+          <!--<h6 class="visitx" id="visitx">V  I  S  I  G  R  A  T  I  O  N.</h6>-->
+
+
         </div>
 
+<<<<<<< HEAD
     
          <div id="canvas">
       
@@ -150,9 +136,12 @@
      
             
         };
+=======
+>>>>>>> FETCH_HEAD
 
-        var chart = new google.visualization.PieChart(document.getElementById('Region-pie'));
+        <div id="canvas">
 
+<<<<<<< HEAD
         chart.draw(data, options);
         
           
@@ -170,14 +159,99 @@
       
     function drawChart() {
       var jsonData = $.ajax({
+=======
+          <!--Divs will hold visual-data-->
+
+
+          <!-- Google Charts API-->
+
+          <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+          <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
+
+
+          <script>
+          var regionOccupationCounts = {};
+
+          // Loads occupation and region information from the supplied CSV
+          d3.csv("data/work_visas_cut.csv", function(d) {
+            return {
+              occupation: d["Standard Submajor Group"],
+              region: d["Region"]
+            };
+            // this function iterates over every entry from the work visa CSV file
+          }, function(data) {
+            data.forEach(function(entry) {
+              // If the region is not yet defined, define it
+              if(regionOccupationCounts[entry.region] === undefined) {
+                regionOccupationCounts[entry.region] = {};
+              }
+
+              // If this occupation is not yet defined in the region, set its count equal to one
+              if(regionOccupationCounts[entry.region][entry.occupation] === undefined) {
+                regionOccupationCounts[entry.region][entry.occupation] = 1;
+              }
+              else {
+                regionOccupationCounts[entry.region][entry.occupation] += 1;
+              }
+            });
+            // Log the regional occupational data to the console
+            console.log(regionOccupationCounts);
+          });
+
+          google.setOnLoadCallback(drawChart);
+          function drawChart() {
+
+            var array = [];
+
+            array.push(["Occupation", "Count"]);
+
+            $.map(regionOccupationCounts["Northland"], function(value, index) {
+              array.push([index,value]);
+            });
+
+            console.log(array);
+
+            var data = google.visualization.arrayToDataTable(array);
+
+            var options = {
+              title: 'Occupations'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('Region-pie'));
+
+            chart.draw(data, options);
+
+          }
+
+
+          /*
+          //JSON Method.
+
+          // Load the Visualization API and the piechart package.
+          google.load('visualization', '1', {'packages':['corechart']});
+
+          // Set a callback to run when the Google Visualization API is loaded.
+          google.setOnLoadCallback(drawChart);
+
+          function drawChart() {
+          var jsonData = $.ajax({
+>>>>>>> FETCH_HEAD
           url: "getData.php",
           dataType:"json",
           async: false
-          }).responseText;
-          
-      // Create our data table out of JSON data loaded from server.
-      var data = new google.visualization.DataTable(jsonData);
+        }).responseText;
 
+        // Create our data table out of JSON data loaded from server.
+        var data = new google.visualization.DataTable(jsonData);
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('Region-pie'));
+        chart.draw(data, {width: 400, height: 240});
+      }
+      */
+
+
+<<<<<<< HEAD
       // Instantiate and draw our chart, passing in some options.
       var chart = new google.visualization.PieChart(document.getElementById('Region-pie'));
       chart.draw(data, {width: 400, height: 240});
@@ -273,9 +347,100 @@
 
 
         
+=======
+
+
+      </script>
+
+      <div id="paper"></div>
+
+      <div id="northland" class="region-desc">
+        <h2>Northland (Te Tai-tokerau)  </h2>
+        <div id="Region-pie"></div>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="waikato" class="region-desc">
+        <h2>Waikato  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="auckland" class="region-desc">
+        <h2>Auckland (Tāmaki Makaurau)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="manawatu" class="region-desc">
+        <h2>Manawatu-Wanganui  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="bayofplenty" class="region-desc">
+        <h2>Bay of Plenty (Te Moana-a-Toi)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="eastcape" class="region-desc">
+        <h2>Gisborne (Tai Rāwhiti)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="hawkesbay" class="region-desc">
+        <h2>Hawke's Bay (Heretaunga)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="taranaki" class="region-desc">
+        <h2>Taranaki  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="wellington" class="region-desc">
+        <h2>Wellington (Te Upoko-o-te-Ika)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="canterbury" class="region-desc">
+        <h2>Canterbury (Waitaha)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="marlborough" class="region-desc">
+        <h2>Marlborough (Marapara)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="westcoast" class="region-desc">
+        <h2>The West Coast (Te Tai Poutini)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="otago" class="region-desc">
+        <h2>Otago (Otakou)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="southland" class="region-desc">
+        <h2>Southland (Murihiku)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="nelson" class="region-desc">
+        <h2>Nelson (Whakatū)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+      <div id="tasman" class="region-desc">
+        <h2>Tasman (Te Tau Ihu o Te Waka a Maui)  </h2>
+        <div id="region-row" class="region-row"></div>
+
+      </div>
+
+
+
     </header>
-                <div id="footer" class="footer"></div>
-                <div id="headz" class="headz"></div>
+    <div id="footer" class="footer"></div>
+    <div id="headz" class="headz"></div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -287,34 +452,34 @@
     <script>
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
+      e.preventDefault();
+      $("#sidebar-wrapper").toggleClass("active");
     });
 
     // Opens the sidebar menu
     $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
+      e.preventDefault();
+      $("#sidebar-wrapper").toggleClass("active");
     });
 
     // Scrolls to the selected menu item on the page
     $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
     });
     </script>
 
-</body>
+  </body>
 
-</html>
+  </html>
